@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 6rem;
-  min-height: 100vh;
+  min-height: 95vh;
 }
 
 .description {
@@ -106,6 +106,18 @@
 
 .logo {
   position: relative;
+}
+
+.mainNav ul {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.mainNav ul li {
+  list-style: none;
+  margin: 0 1.5rem;
+  font-weight: bold;
 }
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
