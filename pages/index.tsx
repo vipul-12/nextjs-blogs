@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "@/styles/Home.module.css";
-import Link from "next/Link";
 
 export default function Home() {
   return (
@@ -13,15 +12,6 @@ export default function Home() {
         <link rel="icon" href="/batman.svg" />
       </Head>
       <main>
-        <nav className={styles.navigation}>
-          <ul>
-            <div className="links"><Link href="/" ><li>Home</li></Link></div>
-            <div className="links"><Link href="/about"><li>About</li></Link></div>
-            <div className="links"><Link href="/blogs"><li>Blogs</li></Link></div>
-            <div className="links"><Link href="/contact"><li>Contact the Bat</li></Link></div>
-          </ul>
-        </nav>
-
         <div className={styles.heading}>
           <h1>Bat Blogs</h1>
         </div>

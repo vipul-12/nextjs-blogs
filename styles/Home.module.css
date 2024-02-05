@@ -1,23 +1,6 @@
 /* display: flex;
 flex-direction: column;  */
 
-.navigation {
-  display: flex;
-  justify-content: center;
-}
-
-.navigation ul {
-  margin-top: 1rem;
-  display: flex;
-}
-
-.navigation li {
-  list-style: none;
-  margin: 0 1.5rem;
-  font-weight: bold;
-  font-size: 1.3rem;
-}
-
 .heading {
   display: flex;
   justify-content: center;
@@ -31,9 +14,4 @@ flex-direction: column;  */
 .blogs {
   display: flex;
   justify-content: center;
-}
-
-.links{
-  text-decoration: none;
-  color: black;
 }
