@@ -27,10 +27,30 @@ export default function Home() {
         </div>
 
         <div className={styles.blogs}>
-          <h4>Blogs go here</h4>
+          <h2>Blogs go here</h2>
+          <div className={styles.blogItem}>
+            <h3>BlogItem Heading</h3>
+            <p className={styles.description}>
+              BlogItem Content, BlogItem Content, BlogItem Content, BlogItem
+              Content, BlogItem Content.{" "}
+            </p>
+          </div>
+          <div className={styles.blogItem}>
+            <h3>BlogItem Heading</h3>
+            <p className={styles.description}>
+              BlogItem Content, BlogItem Content, BlogItem Content, BlogItem
+              Content, BlogItem Content.{" "}
+            </p>
+          </div>
+          <div className={styles.blogItem}>
+            <h3>BlogItem Heading</h3>
+            <p className={styles.description}>
+              BlogItem Content, BlogItem Content, BlogItem Content, BlogItem
+              Content, BlogItem Content.{" "}
+            </p>
+          </div>
         </div>
       </main>
     </div>
-
   );
 }

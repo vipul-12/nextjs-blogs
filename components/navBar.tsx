@@ -30,26 +30,30 @@ const NavBar = () => {
       </style>
       <nav className="navigation">
         <ul>
-          <div className="links">
-            <Link href="/">
-              <li>Home</li>
-            </Link>
-          </div>
-          <div className="links">
-            <Link href="/about">
-              <li>About</li>
-            </Link>
-          </div>
-          <div className="links">
-            <Link href="/blogs">
-              <li>Blogs</li>
-            </Link>
-          </div>
-          <div className="links">
-            <Link href="/contact">
-              <li>Contact the Bat</li>
-            </Link>
-          </div>
+          <Link href="/" style={{ color: "black", "text-decoration": "none" }}>
+            <li>Home</li>
+          </Link>
+
+          <Link
+            href="/about"
+            style={{ color: "black", "text-decoration": "none" }}
+          >
+            <li>About</li>
+          </Link>
+
+          <Link
+            href="/blogs"
+            style={{ color: "black", "text-decoration": "none" }}
+          >
+            <li>Blogs</li>
+          </Link>
+
+          <Link
+            href="/contact"
+            style={{ color: "black", "text-decoration": "none" }}
+          >
+            <li>Contact the Bat</li>
+          </Link>
         </ul>
       </nav>
     </>
