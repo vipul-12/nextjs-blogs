@@ -28,9 +28,10 @@ const Blogs = () => {
 
   }, [])
   return (
-    <div className={styles.blogs}>
-      <h2>Blogs</h2>
 
+    <div className={styles.blogs}>
+      {/* <div className="spinner"></div> */}
+      <h2>Blogs</h2>
       {state &&
         state.map((blog: any) => {
           return (
@@ -39,7 +40,7 @@ const Blogs = () => {
                 <h3>{blog.title}</h3>
               </Link>
               <p className={styles.description}>
-                {blog.content.substr(0,200)} ......
+                {blog.content.substr(0, 200)} ......
               </p>
             </div>
           )
