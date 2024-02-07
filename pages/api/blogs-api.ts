@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import * as fs from "fs";
 
-export default async function handler(
+export default async function handlEr(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
@@ -12,7 +12,7 @@ export default async function handler(
       const item = files[i];
       let blogContent = await fs.promises.readFile(`blogData/${item}`, "utf-8");
       let blog = JSON.parse(blogContent);
-      console.log(blog);
+
       blogs.push(blog);
     }
     res.status(200).json(blogs);

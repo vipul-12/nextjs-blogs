@@ -5,7 +5,7 @@
 
 .blogItem h3 {
   display: flex;
-  justify-content: center;
+  justify-content:center;
 }
 
 .description {

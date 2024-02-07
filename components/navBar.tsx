@@ -30,13 +30,13 @@ const NavBar = () => {
       </style>
       <nav className="navigation">
         <ul>
-          <Link href="/" style={{ color: "black", "text-decoration": "none" }}>
+          <Link href="/" style={{ color: "black", "textDecoration": "none" }}>
             <li>Home</li>
           </Link>
 
           <Link
             href="/about"
-            style={{ color: "black", "text-decoration": "none" }}
+            style={{ color: "black", "textDecoration": "none" }}
           >
             <li>About</li>
           </Link>
