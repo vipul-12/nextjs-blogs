@@ -3,6 +3,10 @@
   justify-content: center;
 }
 
+.blogItem{
+  padding: 0 25rem;
+}
+
 .blogItem h3 {
   display: flex;
   justify-content:center;
