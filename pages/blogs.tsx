@@ -1,23 +1,47 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Blogs.module.css";
-import Link from "next/Link";
+import Link from "next/link";
 import axios from "axios";
+import * as fs from "fs"
 
 
 // SERVER SIDE RENDERING
-export async function getServerSideProps(context) {
-  const response = await axios.get("http://localhost:8000/api/blogs-api");
-  const data = response.data;
+// export async function getServerSideProps(context: any) {
+//   const response = await axios.get("http://localhost:8000/api/blogs-api");
+//   const data = response.data;
+//   return {
+//     props: {
+//       data
+//     },
+//   }
+// }
+
+// STATIC RENDERING
+export const getStaticProps = (async (context: any) => {
+  let blogs: Object[] = [];
+  try {
+    let files = await fs.promises.readdir("blogData");
+    for (let i = 0; i < files.length; i++) {
+      const item = files[i];
+      let blogContent = await fs.promises.readFile(`blogData/${item}`, "utf-8");
+      let blog = JSON.parse(blogContent);
+
+      blogs.push(blog);
+    }
+    // res.status(200).json(blogs);
+  } catch (error) {
+    console.error(error);
+    // res.status(500).json({ error: "Internal Server Error" });
+  }  
   return {
     props: {
-      data
+      blogs
     },
   }
-}
+})
 
-const Blogs = (props:any) => {
-  
-  const [state, setState] = useState<any[]>(props.data);// injecting props into the state
+const Blogs = (props: any) => {
+  const [state, setState] = useState<any[]>(props.blogs);// injecting props into the state
 
   // const fetchBlogs = async () => {
   //   try {

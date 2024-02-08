@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/Link";
+import Link from "next/link";
 const NavBar = () => {
   return (
     <>
@@ -43,14 +43,14 @@ const NavBar = () => {
 
           <Link
             href="/blogs"
-            style={{ color: "black", "text-decoration": "none" }}
+            style={{ color: "black", "textDecoration": "none" }}
           >
             <li>Blogs</li>
           </Link>
 
           <Link
             href="/contact"
-            style={{ color: "black", "text-decoration": "none" }}
+            style={{ color: "black", "textDecoration": "none" }}
           >
             <li>Contact the Bat</li>
           </Link>

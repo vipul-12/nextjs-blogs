@@ -2,24 +2,49 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import styles from "../../styles/BlogPost.module.css";
 import axios from "axios";
+import * as fs from "fs";
 
 // SERVER SIDE RENDERING
-export async function getServerSideProps(context: any) {
+// export async function getServerSideProps(context: any) {
 
-  const slug = context.query.slug;
-  const response = await axios.get(`http://localhost:8000/api/getBlog?slug=${slug}`);
-  const data = response.data;
+//   const slug = context.query.slug;
+//   const response = await axios.get(`http://localhost:8000/api/getBlog?slug=${slug}`);
+//   const data = response.data;
+//   return {
+//     props: {
+//       data
+//     },
+//   }
+// }
+
+// STATIC RENDERING
+export const getStaticPaths = (async () => {
+  return {
+    paths: [
+      { params: { slug: "batman" } },
+      { params: { slug: "superman" } },
+      { params: { slug: "spiderman" } }
+    ],
+    fallback: true
+  };
+})
+
+export const getStaticProps = (async (context: any) => {
+  const { slug } = context.params;
+
+  let data = await fs.promises.readFile(`blogData/${slug}.json`, "utf-8");
+  const blog = JSON.parse(data);
   return {
     props: {
-      data
-    },
+      blog
+    }
   }
-}
+})
 
-const blog = (props: any) => {
+const Blog = (props: any) => {
   // const router = useRouter();
   // const { slug } = router.query;
-  const [state, setState] = useState<any>(props.data);// injecting props into the state
+  const [state, setState] = useState<any>(props.blog);// injecting props into the state
 
   // const fetchBlog = async () => {
   //   try {
@@ -60,4 +85,4 @@ const blog = (props: any) => {
   );
 };
 
-export default blog;
+export default Blog;
