@@ -3,6 +3,10 @@
   justify-content: center;
 }
 
+.blogItem {
+  padding: 0 25rem;
+}
+
 .blogItem h3 {
   display: flex;
   justify-content: center;
@@ -12,3 +16,26 @@
   display: flex;
   justify-content: center;
 }
+
+/* .spinner {
+  display: flex;
+  justify-content: center;
+  height: 250px;
+  width: 150px;
+  background-color: red;
+  border-radius: 50%;
+  border-top-color: blue;
+  border: 3px solid gray;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+
+} */

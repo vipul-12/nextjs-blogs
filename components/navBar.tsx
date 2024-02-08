@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/Link";
+import Link from "next/link";
 const NavBar = () => {
   return (
     <>
@@ -30,27 +30,27 @@ const NavBar = () => {
       </style>
       <nav className="navigation">
         <ul>
-          <Link href="/" style={{ color: "black", "text-decoration": "none" }}>
+          <Link href="/" style={{ color: "black", "textDecoration": "none" }}>
             <li>Home</li>
           </Link>
 
           <Link
             href="/about"
-            style={{ color: "black", "text-decoration": "none" }}
+            style={{ color: "black", "textDecoration": "none" }}
           >
             <li>About</li>
           </Link>
 
           <Link
             href="/blogs"
-            style={{ color: "black", "text-decoration": "none" }}
+            style={{ color: "black", "textDecoration": "none" }}
           >
             <li>Blogs</li>
           </Link>
 
           <Link
             href="/contact"
-            style={{ color: "black", "text-decoration": "none" }}
+            style={{ color: "black", "textDecoration": "none" }}
           >
             <li>Contact the Bat</li>
           </Link>
