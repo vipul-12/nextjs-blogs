@@ -65,6 +65,10 @@ const Blog = (props: any) => {
   //   })
   // }, [router.isReady])
 
+  function createMarkup(c) {
+    return {__html: c};
+  }
+
   return (
 
     <div className={styles.container}>
@@ -74,7 +78,8 @@ const Blog = (props: any) => {
           <hr />
 
           <p>
-            {state.content}
+            {/* {state.content} */}
+            <div dangerouslySetInnerHTML={createMarkup(state.content)}></div>
           </p>
 
           <div>

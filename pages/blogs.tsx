@@ -77,7 +77,7 @@ const Blogs = (props: any) => {
                 <h3>{blog.title}</h3>
               </Link>
               <p className={styles.description}>
-                {blog.content.substr(0, 200)} ......
+                {blog.metaDesc.substr(0, 200)} ......
               </p>
             </div>
           )
